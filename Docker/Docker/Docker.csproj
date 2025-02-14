@@ -26,5 +26,7 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
         <PackageReference Include="Dock.Avalonia" Version="11.2.0" />
         <PackageReference Include="Dock.Model.Mvvm" Version="11.2.0" />
+        <PackageReference Include="SukiUI" Version="6.0.0" />
+        <PackageReference Include="SukiUI.Dock" Version="6.0.0-rc" />
     </ItemGroup>
 </Project>
