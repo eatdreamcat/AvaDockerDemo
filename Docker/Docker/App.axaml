@@ -2,14 +2,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="Docker.App"
              xmlns:local="using:Docker"
+             xmlns:dock="clr-namespace:Dock.Avalonia;assembly=Dock.Avalonia"
+             xmlns:core="using:Dock.Model.Core"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-             
     <Application.DataTemplates>
         <local:ViewLocator/>
     </Application.DataTemplates>
   
+             <Application.Resources>
+                 <ControlRecycling x:Key="ControlRecyclingKey" />
+             </Application.Resources>
+             
     <Application.Styles>
-        <FluentTheme />
+        <StyleInclude Source="avares://Dock.Avalonia/Themes/DockFluentTheme.axaml" />
     </Application.Styles>
 </Application>

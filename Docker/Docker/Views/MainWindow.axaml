@@ -1,13 +1,18 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:Docker.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Docker.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="Docker">
+<sukiUi:SukiWindow xmlns="https://github.com/avaloniaui"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:vm="using:Docker.ViewModels"
+                   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                   xmlns:sukiUi="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+                   xmlns:view="using:Docker.Views"
+                   xmlns:ids="using:Dock.Settings"
+                   mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+                   x:Class="Docker.Views.MainWindow"
+                   UseLayoutRounding="True"
+                   x:DataType="vm:MainWindowViewModel" x:CompileBindings="True"
+                   Icon="/Assets/avalonia-logo.ico"
+                   Title="Docker"
+                   ids:DockProperties.IsDragEnabled="True" ids:DockProperties.IsDropEnabled="True">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,6 +20,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-  
+  <view:MainView></view:MainView>
 
-</Window>
+</sukiUi:SukiWindow>

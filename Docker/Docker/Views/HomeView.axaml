@@ -1,0 +1,13 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:Docker.ViewModels"
+             x:Class="Docker.Views.HomeView"
+             x:DataType="vm:HomeViewModel" x:CompileBindings="True">
+    <Grid RowDefinitions="*,25" Background="Aqua">
+        <ContentControl Content="{Binding ActiveDockable}" Margin="4" Grid.Row="0" />
+        <TextBlock Text="{Binding FocusedDockable}" Margin="4" Grid.Row="1" />
+    </Grid>
+</UserControl>
